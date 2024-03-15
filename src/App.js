@@ -1,12 +1,20 @@
 import './App.css';
+import {Route, Routes} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
+import Shop from './components/pages/Shop';
+import Account from './components/pages/Account';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello, world!</p>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
+    </>
   );
 }
 
